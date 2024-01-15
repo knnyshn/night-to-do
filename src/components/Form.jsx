@@ -1,19 +1,22 @@
 import { useState } from "react";
 
-function Form({createTodo}) {
-    const [value, setValue] = useState("");
-    
+function Form({ createTodo }) {
+  const [value, setValue] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     createTodo(value);
     setValue("");
   };
-    
+
   return (
-    <form className="mb-4 w-full" onSubmit={handleSubmit}>
+    <form
+      className="mb-4 w-full font-primary"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
-        className="outline-none bg-transparent border border-gray-500 p-4 w-[300px] text-black mb-8 rounded placeholder:text-gray-300"
+        className="outline-none bg-transparent border justify-center border-gray-500 p-4 w-[300px] text-black mb-8 rounded placeholder:text-gray-300"
         placeholder="What do you need to do tonight?"
         onChange={(e) => setValue(e.target.value)}
         value={value}
