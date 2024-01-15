@@ -1,8 +1,8 @@
-import TodoWrapper from './components/TodoWrapper'
+import TodoList from "./components/TodoList"
 
 function App() {
   return (
-    <TodoWrapper />
+    <TodoList />
   )
 }
 
